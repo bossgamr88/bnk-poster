@@ -1,0 +1,19 @@
+<nav class="navbar navbar-fixed-top">
+
+    <div class="content-padding">
+        <ul class="nav navbar-nav navbar-right ">
+           <li><a href="/">Home</a></li>
+           <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            Member <i class="fa fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+                <% for(var i = 0; i < members.length; i++){ %>
+                <li><a href="/member/<%= 1+i %>" class="episode_link"><%= members[i].title %></a></li>
+                <% } %>
+            </ul>
+          </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- เปลี่ยนเป็น var i = 0 เป็น 1 ก็ได้ จะได้ i อย่างเดียว  เเต่เค้านิยมทำเเบบบนมากกว่า -->
