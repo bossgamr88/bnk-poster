@@ -7,5 +7,23 @@ exports.home = (req,res) => {
 		title : 'Bnk48 bangkok forty eight',
 		members : members
 	})
+}
 
+exports.member_single = (req,res) => {
+	var member_id = req.params.member_id
+	var members = memberJSON.members
+
+	if(member_id >= 1 && member_id <= 6){
+		//เทียบค่าจากตำเเหน่งใน array  [ 0 1 2 3 4 5 6 ] = (-1) [ 0 1 2 3 4 5 ] 
+		var member = members[member_id - 1] 
+		console.log(member)
+		var title = member.title
+		var main_characters = member.main_characters
+		res.render('member-single',{
+			members : members,
+			title : title,
+			member : member,
+			main_characters : main_characters
+		})
+	}
 }

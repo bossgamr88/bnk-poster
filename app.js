@@ -10,5 +10,6 @@ app.set('view engine','ejs')
 app.use(express.static('./public'))
 
 app.get('/',routes.home)
+app.get('/member/:member_id?',routes.member_single)
 
 app.listen(process.env.PORT || port)
