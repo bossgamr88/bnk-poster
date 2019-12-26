@@ -5,8 +5,10 @@ const port = 7000
 
 const routes = require('./routes')
 
-app.get('/',routes.home)
-
+app.set('view engine','ejs')
 app.use(express.static(path.join(__dirname,'public')))
+
+
+app.get('/',routes.home)
 
 app.listen(process.env.PORT || port)

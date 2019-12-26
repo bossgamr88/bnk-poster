@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
+    
+    <div id="hero-image">
+        <h1 id="hero-title"> <%= title %> </h1>
+    </div>
+    
+    <div id="posters-wrapper" class="content-padding clearfix">
+
+        <% for (var i=0; i< members.length; i++){ %>
+        <div class="poster">
+          <a href="/member/<%= members[i].member_name %>">
+            <img src="/img/<%= members[i].poster%>" class="img-responsive">
+            <div class="poster-info-overlay">
+                <h3><%= members[i].title %></h3>
+                <h4>View More <i class="fa fa-arrow-right"></i></h4>
+          </div>
+          </a>
+        </div>
+        <%} %>
+    </div>  
+
+    </div>  
+  </body>
+</html>  
+
+
